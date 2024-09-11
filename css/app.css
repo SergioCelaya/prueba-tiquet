@@ -1,0 +1,72 @@
+.arrow_box {
+    width: 400px;
+    height: 200px;
+	position: relative;
+    left: 200px;
+	background: #88b7d5;
+	border: 4px solid #c2e1f5;
+    margin-top: 100px;
+}
+.arrow_box::after, .arrow_box::before {
+	top: 24%;
+	left: 100%;
+	border: solid transparent;
+	content: "";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.arrow_box:before {
+
+    float: left;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    clip-path: circle(50% at 0%);
+    background: lightblue;
+}
+
+.arrow_box:after {
+
+    float: left;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    clip-path: circle(46% at 0%);
+    background: #88b7d5;
+}
+
+.box_arrow::after, .box_arrow::before {
+	top: 24%;
+	left: 0;
+	border: solid transparent;
+	content: "";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.box_arrow:before {
+
+    float: left;
+    left:-105px;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    clip-path: circle(50% at 100%);
+    background: lightblue;
+}
+
+.box_arrow:after {
+
+    float: left;
+    width: 100px;
+    height: 100px;
+    left:-105px;
+    position: absolute;
+    clip-path: circle(46% at 100%);
+    background: #88b7d5;
+}
